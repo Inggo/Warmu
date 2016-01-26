@@ -2,7 +2,7 @@
 /*
  * Plugin Name: Warmu
  * Plugin URI: https://github.com/Inggo/Warmu
- * Description: React interface for Posts, Pages, CPTs, Taxonomies, and Users.
+ * Description: WordPress Admin interface using React and Material-UI
  * Author: Inggo Espinosa
  * Author URI: https://inggo.xyz/
  * Version: 0.1.0

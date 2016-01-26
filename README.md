@@ -1,4 +1,6 @@
-# wp-admin React
+# Warmu
+
+WordPress Admin interface using React and Material-UI.
 
 Readme Soon&trade;.
 

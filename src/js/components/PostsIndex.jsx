@@ -104,13 +104,14 @@
       }
 
       showColumn(col, row, i, j) {
+        var key = 'row-' + i + '-col-' + j;
         if (col.key === 'debug') {
           return (
-            <TableRowColumn><span>{this.state.selectedRows.indexOf(i)}</span></TableRowColumn>
+            <TableRowColumn key={key}><span>{this.state.selectedRows.indexOf(i)}</span></TableRowColumn>
           );
         }
         return (
-          <TableRowColumn>{row[col.key]}</TableRowColumn>
+          <TableRowColumn key={key}>{row[col.key]}</TableRowColumn>
         );
       }
 
@@ -128,7 +129,7 @@
               <TableHeader enableSelectAll={this.state.enableSelectAll}>
                 <TableRow>
                   {tableColumns.map( (col, i) => (
-                    <TableHeaderColumn>{col.label}</TableHeaderColumn>
+                    <TableHeaderColumn key={'col-' + i}>{col.label}</TableHeaderColumn>
                   ))}
                 </TableRow>
               </TableHeader>
@@ -138,9 +139,9 @@
                 stripedRows={this.state.stripedRows}
               >
                 {tableData.map( (row, i) => (
-                  <TableRow key={row.id} selected={this.state.selectedRows.indexOf(i) !== -1}>
+                  <TableRow key={'row-' + i} selected={this.state.selectedRows.indexOf(i) !== -1}>
                     {tableColumns.map( (col, j) => (
-                      this.showColumn(col, row, i, j);
+                      this.showColumn(col, row, i, j)
                     ))}
                   </TableRow>
                 ))}

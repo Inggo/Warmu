@@ -14,11 +14,11 @@ class TemplateOverrider
     public function load_template($template)
     {
         if ($this->maybe_load_template()) {
-            $react_template = locate_template(array('wp-react.php'));
+            $react_template = locate_template(array('warmu-index.php'));
             if ($react_template !== '') {
                 return $react_template;
             } else {
-                return load_template($this->plugin_dir . '/templates/wp-react.php');
+                return load_template($this->plugin_dir . '/templates/warmu-index.php');
             }
         }
         return $template;
@@ -26,6 +26,6 @@ class TemplateOverrider
 
     public function maybe_load_template()
     {
-        return get_query_var('name') === 'react-admin';
+        return get_query_var('name') === 'warmu';
     }
 }

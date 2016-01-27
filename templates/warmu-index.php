@@ -22,7 +22,7 @@
 </head>
 
 <body>
-  <div id="app"></div>
+  <div id="warmu"></div>
   <script src="<?= WPAR_PLUGIN_URL ?>/js/app.js"></script>
 </body>
 
